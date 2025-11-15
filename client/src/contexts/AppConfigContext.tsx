@@ -14,7 +14,7 @@ const AppConfigContext = createContext<AppConfigContextType | undefined>(undefin
 
 export function AppConfigProvider({ children }: { children: ReactNode }) {
   const [config, setConfig] = useState<AppConfig>({
-    logoUrl: '/sentra-logo-horizontal.png',
+    logoUrl: 'https://i.postimg.cc/h4fCZpVV/Captura-de-Tela-2025-11-15-a-s-19-03-45-removebg-preview.png',
     appName: 'Sentra Partners',
     loading: true,
   });
@@ -25,7 +25,7 @@ export function AppConfigProvider({ children }: { children: ReactNode }) {
       if (response.ok) {
         const data = await response.json();
         setConfig({
-          logoUrl: data.config?.logoUrl || '/sentra-logo-horizontal.png',
+          logoUrl: data.config?.logoUrl || 'https://i.postimg.cc/h4fCZpVV/Captura-de-Tela-2025-11-15-a-s-19-03-45-removebg-preview.png',
           appName: data.config?.appName || 'Sentra Partners',
           loading: false,
         });
