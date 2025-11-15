@@ -303,3 +303,18 @@
     }
   }
 }
+
+/* Fix sidebar layout - prevent content overlap */
+[data-slot="sidebar-inset"] {
+  margin-left: 0 !important;
+}
+
+@media (min-width: 768px) {
+  [data-slot="sidebar-inset"] {
+    margin-left: var(--sidebar-width) !important;
+  }
+  
+  [data-state="collapsed"] ~ [data-slot="sidebar-inset"] {
+    margin-left: var(--sidebar-width-icon) !important;
+  }
+}
