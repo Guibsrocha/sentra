@@ -6,7 +6,7 @@ npm cache clean --force
 
 echo "📦 Installing dependencies..."
 rm -rf node_modules package-lock.json
-npm install --legacy-peer-deps
+npm install --legacy-peer-deps --include=dev
 
 echo "🏗️ Building project..."
 npm run build
