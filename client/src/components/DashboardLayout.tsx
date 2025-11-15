@@ -233,7 +233,7 @@ function DashboardLayoutContent({
           className="border-r-0"
           disableTransition={isResizing}
         >
-          <SidebarHeader className="h-16 justify-center">
+          <SidebarHeader className="h-14 justify-center py-2">
             <div className="flex items-center gap-3 pl-2 group-data-[collapsible=icon]:px-0 transition-all w-full">
               {isCollapsed ? (
                 <div className="relative h-8 w-8 shrink-0 group">
@@ -254,7 +254,7 @@ function DashboardLayoutContent({
                   <div className="flex items-center gap-3 min-w-0">
                     <img
                       src={logoUrl}
-                      className="h-16 w-auto object-contain shrink-0"
+                      className="h-10 w-auto object-contain shrink-0"
                       alt={appName}
                     />
                   </div>
@@ -269,8 +269,8 @@ function DashboardLayoutContent({
             </div>
           </SidebarHeader>
 
-          <SidebarContent className="gap-0">
-            <SidebarMenu className="px-2 py-1">
+          <SidebarContent className="gap-0 pt-0">
+            <SidebarMenu className="px-2 py-0">
               {menuItems.map(item => {
                 const isActive = location === item.path;
                 return (
