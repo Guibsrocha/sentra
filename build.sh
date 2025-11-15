@@ -1,8 +1,12 @@
 #!/bin/bash
 set -e
 
+echo "🧹 Cleaning npm cache..."
+npm cache clean --force
+
 echo "📦 Installing dependencies..."
-npm install --production=false
+rm -rf node_modules package-lock.json
+npm install --legacy-peer-deps
 
 echo "🏗️ Building project..."
 npm run build
