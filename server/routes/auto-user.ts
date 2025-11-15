@@ -1,5 +1,5 @@
 import { Router } from "express";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import { getDb } from "../db";
 import { users, userPurchases } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";

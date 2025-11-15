@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { getDb } from './db';
 import { users } from '../drizzle/schema';
 import { eq } from 'drizzle-orm';
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import crypto from 'crypto';
 import { emailService } from './services/email-service';
 

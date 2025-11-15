@@ -1,7 +1,7 @@
 import { Router, Request, Response } from "express";
 import { nowPaymentsService } from "../services/nowpayments";
 import crypto from "crypto";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import { getDb } from "../db";
 import { users, userPurchases, userSubscriptions, subscriptionPlans } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";

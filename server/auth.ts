@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import { SignJWT, jwtVerify } from 'jose';
 import { eq } from 'drizzle-orm';
 import { users, type User, type InsertUser } from '../drizzle/schema';
