@@ -51,7 +51,7 @@ export function BugReportButton() {
       {/* Botão flutuante */}
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-24 right-6 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all z-40 bg-red-600 hover:bg-red-700 text-white"
+        className="fixed bottom-24 right-6 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all z-40 !bg-red-600 hover:!bg-red-700 !text-white"
         size="icon"
         title="Reportar Bug"
       >

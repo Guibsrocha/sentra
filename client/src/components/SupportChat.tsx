@@ -96,7 +96,7 @@ export function SupportChat() {
       {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50 bg-blue-600 hover:bg-blue-700 text-white"
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50 !bg-blue-600 hover:!bg-blue-700 !text-white"
           size="icon"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-white">
