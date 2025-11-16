@@ -319,32 +319,19 @@
   }
 }
 
-/* Fix sidebar transparency on mobile */
-@media (max-width: 767px) {
-  [data-slot="sidebar"] {
-    background-color: hsl(var(--sidebar)) !important;
-    opacity: 1 !important;
-  }
-  
-  .dark [data-slot="sidebar"] {
-    background-color: hsl(var(--sidebar)) !important;
-  }
+/* Fix sidebar background on mobile - Sheet component */
+[data-slot="sidebar-inner"],
+[data-sidebar="sidebar"] {
+  background-color: hsl(var(--sidebar)) !important;
 }
 
-/* Fix hover on selected items - keep primary color */
-[data-state="active"]:hover,
-[data-selected="true"]:hover,
-[aria-selected="true"]:hover {
-  background-color: hsl(var(--primary)) !important;
-  color: hsl(var(--primary-foreground)) !important;
+/* Fix chat button visibility in light mode */
+:root .fixed.bottom-6.right-6 button,
+:root button[class*="fixed"][class*="bottom"] {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
-/* Ensure chat icon is visible in light mode */
-.light [data-chat-icon],
-:root [data-chat-icon] {
-  filter: brightness(0.2);
-}
-
-.dark [data-chat-icon] {
-  filter: brightness(1);
+:root button[class*="fixed"][class*="bottom"]:hover {
+  opacity: 0.9;
 }
