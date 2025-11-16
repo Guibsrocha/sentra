@@ -318,3 +318,33 @@
     margin-left: var(--sidebar-width-icon) !important;
   }
 }
+
+/* Fix sidebar transparency on mobile */
+@media (max-width: 767px) {
+  [data-slot="sidebar"] {
+    background-color: hsl(var(--sidebar)) !important;
+    opacity: 1 !important;
+  }
+  
+  .dark [data-slot="sidebar"] {
+    background-color: hsl(var(--sidebar)) !important;
+  }
+}
+
+/* Fix hover on selected items - keep primary color */
+[data-state="active"]:hover,
+[data-selected="true"]:hover,
+[aria-selected="true"]:hover {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+}
+
+/* Ensure chat icon is visible in light mode */
+.light [data-chat-icon],
+:root [data-chat-icon] {
+  filter: brightness(0.2);
+}
+
+.dark [data-chat-icon] {
+  filter: brightness(1);
+}
